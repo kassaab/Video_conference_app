@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <h2>Login</h2>
+            <p>Welcome back! Log in to your account.</p>
+            <div class="input-container">
+                <input type="text" placeholder="Enter Username" name="username" required>
+                <input type="password" placeholder="Enter Password" name="password" required>
+            </div>
+            <center>
+                {% if success %}
+                <p style="color: green;"><b>{{ success }}</b></p>
+                {% endif %}
+                {% if error %}
+                <p style="color: red;">{{ error }}</p>
+                {% endif %}
+            </center>
+            <button type="submit" class="login">Login</button>
+        </form>
+        <div class="register">
+            <p>Don't have an account yet? <a href="{% url 'register' %}">Register</a></p>
+        </div>
+    </div>
+</body>
+</html>
