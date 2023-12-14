@@ -3,6 +3,7 @@ from .forms import RegisterForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
+
 def register(request):
     if request.method == "POST":
         form = RegisterForm(request.POST)
@@ -14,7 +15,6 @@ def register(request):
             return render(request, "register.html", {'error': error_message})
 
     return render(request, "register.html")
-
 
 def login_view(request):
     if request.method == "POST":
@@ -33,3 +33,18 @@ def login_view(request):
 def dashboard(request):
     return render(request, "dashboard.html", {'name': request.user.first_name})
 
+@login_required()
+def meeting(request):
+    return render(request, "meeting.html", {'name': request.user.first_name + " " + request.user.last_name})
+
+
+def logout_view(request):
+    logout(request)
+    return redirect("/login")
+
+@login_required()
+def join_room(request):
+    if request.method == "POST":
+        roomID = request.POST['roomID']
+        return redirect("/meeting?roomID=" + roomID)
+    return render(request, "join_room.html")

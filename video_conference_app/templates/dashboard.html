@@ -13,11 +13,11 @@
         <p>Welcome, {{ name }}!</p>
     </div>
     <div class="dashboard-buttons">
-        <a href="#" class="dashboard-button start-meeting">Start a Meeting</a>
-        <a href="#" class="dashboard-button join-meeting">Join a Meeting</a>
+        <a href="{% url 'meeting' %}" class="dashboard-button">Start Meeting</a>
+        <a href="{% url 'join' %}" class="dashboard-button">Join Meeting</a>
     </div>
     <div class="logout">
-        <a href="#">Logout</a>
+        <a href="{% url 'logout' %}">Logout</a>
     </div>
 </div>
 </body>

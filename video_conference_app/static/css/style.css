@@ -103,12 +103,6 @@ button:hover {
     text-decoration: underline;
 }
 
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-}
-
 .dashboard-container {
     max-width: 600px;
     margin: 50px auto;
@@ -125,7 +119,7 @@ body {
     text-align: center;
     border-radius: 8px 8px 0 0;
     margin-bottom: 20px;
-    font-size: 24px; /* Increase font size */
+    font-size: 24px;
 }
 
 .dashboard-buttons {
@@ -163,4 +157,40 @@ body {
 
 .logout a:hover {
     text-decoration: underline;
+}
+
+.join-meeting-form {
+    text-align: center;
+}
+
+.join-meeting-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.join-meeting-form input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.join-meeting-button {
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2ecc71;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.join-meeting-button:hover {
+    background-color: #27ae60;
 }

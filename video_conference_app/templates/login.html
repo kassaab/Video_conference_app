@@ -13,7 +13,7 @@
         <form action="{% url 'login' %}" method="POST">
             {% csrf_token %}
             <h2>Login</h2>
-            <p>Welcome back! Log in to your account.</p>
+            <p>Welcome back! Please log in to your account.</p>
             <div class="input-container">
                 <input type="text" placeholder="Enter your email" name="email" required>
                 <input type="password" placeholder="Enter your password" name="password" required>

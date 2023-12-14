@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Meeting - Video Conference App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+</head>
+<body>
+<div class="dashboard-container">
+    <div class="welcome-banner">
+        <p>Join Meeting</p>
+    </div>
+    <form action="{% url 'join' %}" method="POST" class="join-meeting-form">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter room ID" name="roomID">
+        <button type="submit" class="dashboard-button join-meeting-button">Join</button>
+    </form>
+</div>
+</body>
+</html>
+
