@@ -9,7 +9,7 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(request, "login.html", {'success': "Registration successful. Please login."}) #*changee this it lead the user straight to the homepage after signup/register
+            return render(request, "login.html", {'success': "Registration successful. Please login."})
         else:
             error_message = form.errors.as_text()
             return render(request, "register.html", {'error': error_message})
@@ -23,7 +23,7 @@ def login_view(request):
         user = authenticate(request, username=email, password=password)
         if user is not None:
             login(request, user)
-            return redirect("/dashboard")  #*do this for line 10 as well
+            return redirect("/dashboard")
         else:
             return render(request, "login.html", {'error': "Invalid credentials. Please try again."})
 
