@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Conference App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="welcome-banner">
+                <h1>Welcome to the Video Conference App!</h1>
+                <p>Connect and collaborate with ease.</p>
+            </div>
+            <div class="landing-options">
+                <p>Already have an account?</p>
+                <a href="{% url 'login' %}" class="landing-button">Login</a>
+                <p>Don't have an account yet?</p>
+                <a href="{% url 'register' %}" class="landing-button">Register</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
