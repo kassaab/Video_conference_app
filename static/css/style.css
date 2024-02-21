@@ -1,0 +1,240 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    color: #777;
+}
+
+hr {
+    border: 0.5px solid #ddd;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-container {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    color: #888;
+}
+
+input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login a:hover {
+    text-decoration: underline;
+}
+
+.register {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
+
+.dashboard-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-banner {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.dashboard-buttons {
+    text-align: center;
+}
+
+.dashboard-button {
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2ecc71;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dashboard-button:hover {
+    background-color: #27ae60;
+}
+
+.logout {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logout a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout a:hover {
+    text-decoration: underline;
+}
+
+.join-meeting-form {
+    text-align: center;
+}
+
+.join-meeting-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.join-meeting-form input {
+    width: calc(100% - 24px);
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.join-meeting-button {
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2ecc71;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.join-meeting-button:hover {
+    background-color: #27ae60;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.landing-options {
+    text-align: center;
+}
+
+.landing-options p {
+    margin-bottom: 10px;
+}
+
+.landing-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #2ecc71;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.landing-button:hover {
+    background-color: #27ae60;
+}
+
