@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from .forms import RegisterForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 
 def index(request):
@@ -38,7 +42,13 @@ def dashboard(request):
 
 @login_required()
 def meeting(request):
-    return render(request, "meeting.html", {'name': request.user.first_name + " " + request.user.last_name})
+    context = {
+        'name': request.user.first_name + " " + request.user.last_name,
+        'appID': env('APP_ID'),
+        'serverSecret': env('SERVER_SECRET'),
+    }
+
+    return render(request, "meeting.html", context)
 
 
 def logout_view(request):
